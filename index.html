@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<title>swyzgfx</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="assets/plugins/lightbox/css/lightbox.css" >
+<link rel="stylesheet" href="assets/css/style.css">
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar">
+  <br>
+  <h3 class="w3-padding-64 w3-center">
+      <img src="assets/img/logo.jpg" class="sidebar-logo"/>
+  </h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">
+      <img src="assets/img/logo.jpg" class="sidebar-logo-sm"/>
+  </span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" 
+    onclick="w3_close()" 
+    style="cursor:pointer" 
+    title="close side menu" 
+    id="myOverlay">
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <div class="w3-container" id="myTitle">
+    <h6 style="display: inline-block; color: #c5c5c5; font-weight: 600;">Categories</h6>
+    <button class="w3-bar-item w3-button" onclick="renderGallery('illustrations')">Illustrations</button>
+    <button class="w3-bar-item w3-button" onclick="renderGallery('logos')">Logos</button>
+    <button class="w3-bar-item w3-button" onclick="renderGallery('poster')">Poster Artwork</button>
+  </div>  
+
+  <!-- Photo grid -->
+  <div class="w3-row" id="myGallery">
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="assets/img/logo.jpg"  class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4></h4>
+      <p>Hi my name is Patrick Swayze Acabo!
+Im a Graphic Artist living in Manila, Phillipines. Im 18 years old and currently taking Digital Arts in STI Caloocan.<br>
+
+<h3>Facts About Me</h3><br>
+•I won the First place in National Schools Press Conference on Cartooning Filipino Category (Taguig City, 2015)<br>
+•When im not sketching or designing, you’ll find me at the gym eating bars<br><br>
+
+<h3>Look What I can Do</h3><br>
+•Logo<br>
+•Illustrations<br>
+•Photo/ Video Editing<br>
+•Branding<br>
+•Sketch/Drawing<br>
+      </p>
+      <p></p>
+      <p></p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Software that i used:</h4>
+      <p class="w3-wide">Photoshop</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">90%</div>
+      </div>
+      <p class="w3-wide">Illustrator</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">After Effects</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">60%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Do you want these piece? Reach me out by filling in the forms below.</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3></h3>
+        <p></p>      
+      </div>
+    </div>
+  </footer>
+<!-- End page content -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/plugins/row-grid/jquery.row-grid.js"></script>
+<script src="assets/plugins/lightbox/js/lightbox.js"></script>
+<script src="assets/js/jquery.easeScroll.js"></script>
+<script>
+
+    var $gallery = $("#myGallery");
+    var data = [
+        {
+            category: "illustrations",
+            path: "assets/img/illustrations/",
+            images: [
+                {
+                    name: "5s jet.jpg",
+                    width: 1800,
+                    height: 1500
+                },
+                {
+                    name: "bart offwhite.jpg",
+                    width: 1450,
+                    height: 1500
+                },
+                {
+                    name: "Rib cage diamond.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "Sneaker monster 1.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "Sneaker monster 2.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "Sneaker monster 3.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "Skull rose.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "white iverson post malone.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "Yeezy Kanyenaut.jpg",
+                    width: 1800,
+                    height: 1500
+                }
+            ]
+        },
+        {
+            category: "logos",
+            path: "assets/img/logos/",
+            images: [
+                {
+                    name: "playboi bago.png",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "players logo.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "pumping ape logo.jpg",
+                    width: 1500,
+                    height: 1500
+                }
+            ]
+        },
+        {
+            category: "poster",
+            path: "assets/img/poster artwork/",
+            images: [
+                {
+                    name: "bladerunne.jpg",
+                    width: 1500,
+                    height: 1500
+                },
+                {
+                    name: "Hennessy Chic.jpg",
+                    width: 1800,
+                    height: 1500
+                },
+                {
+                    name: "KINGSMAN.jpg",
+                    width: 1171,
+                    height: 1500
+                },
+                {
+                    name: "Kodak Black.jpg",
+                    width: 1800,
+                    height: 1500
+                },
+                {
+                    name: "Sneaker with frame 1.jpg",
+                    width: 1500,
+                    height: 1500
+                }
+            ]
+        }
+    ];
+
+     // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+    
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+    function renderGallery(category) {
+        var c = data.find(p => p.category == category);
+
+        $gallery.empty();
+
+        for (var i = 0; i < c.images.length; i++) {
+            var fileName = c.images[i].name;
+            var width = c.images[i].width / 4;
+            var height = c.images[i].height / 4;
+            var row = 
+                `<div class="item">
+                    <a href="${c.path + fileName}" data-lightbox="roadtrip">
+                        <img src="${c.path + fileName}" width="${width}" height="${height}" >
+                    </a>
+                </div>`;
+
+            $gallery.append(row);
+        }
+
+        $gallery.rowGrid({
+            "minMargin": 5,
+            "maxMargin": 5,
+            "itemSelector": ".item",
+            "firstItemClass": "first-item",
+            "lastRowClass": "last-row",
+            "resize": true,
+            "minWidth": 426
+        });
+    }
+
+    $(document).ready(function() {
+        renderGallery("illustrations");
+        $("html").easeScroll();
+    });
+</script>
+
+</body>
+</html>

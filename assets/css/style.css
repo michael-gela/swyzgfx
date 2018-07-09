@@ -1,0 +1,66 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Raleway", sans-serif
+}
+
+.w3-third img{
+    margin-bottom: -6px; 
+    opacity: 0.8; 
+    cursor: pointer;
+}
+
+.w3-third img:hover { 
+    opacity: 1 
+}
+
+.w3-btn, .w3-button {
+    padding: 12px 16px;
+}
+
+#mySidebar {
+    z-index:3;
+    width:300px;
+    font-weight:bold
+}
+
+#myTitle {
+    color: #fff !important;
+    box-shadow: 1px 4px 5px #aaa;
+    background-color: #626262 !important;
+}
+
+#myGallery {
+    margin-bottom: 20px;
+}
+
+.sidebar-logo {
+    width: 150px;
+}
+
+.sidebar-logo-sm {
+    width: 60px;
+}
+
+.item {
+  float: left;
+  margin-bottom: 5px; 
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+}
+
+.first-item {
+  clear: both;
+}
+
+/* remove margin bottom on last row */
+.last-row, .last-row ~ .item {
+  margin-bottom: 0;
+}
